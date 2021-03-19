@@ -1,0 +1,2 @@
+	scanf("%d%d",&x,&y);
+	printf("%d %d\n",Gcd(x,y),Lcm(x,y));
