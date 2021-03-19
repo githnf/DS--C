@@ -1,0 +1,5 @@
+void FractionGet(const FRACTION *fraction, int *num, int *den)
+{
+	*num=(*fraction).num;
+	*den=(*fraction).den;
+}
