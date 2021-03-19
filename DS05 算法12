@@ -1,0 +1,4 @@
+void FractionOutput(const FRACTION *fraction)
+{
+	printf("%d/%d",(*fraction).num,(*fraction).den);
+}
