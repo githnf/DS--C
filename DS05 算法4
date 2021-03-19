@@ -1,0 +1,53 @@
+/* 你提交的代码将被嵌在这里 */
+int IntMax(int x, int y)
+{
+	return (x>y?x:y);
+}
+int IntMin(int x, int y)
+{
+	return (x<y?x:y);
+}
+int Gcd(int x, int y)
+{
+	int m=0;
+	x=(x>0?x:-x);
+	y=(y>0?y:-y);
+	if(x>y)
+	{
+		m=y;
+		y=x;
+		x=m;
+	}
+	m=y-x;
+	if(x==y)
+	{
+		if(x==0)
+		{
+			m=1;
+		}
+		else
+		{
+			m=x;
+		}
+	}
+	else if(x==0||y==0)
+	{
+		m=(x==0?y:x);
+	}
+	else
+	{
+	while(y%m!=0||x%m!=0)
+	{
+		y=x;
+		x=m;
+		while(y-x>0)
+		{
+			y=y-x;
+		 } 
+		 x=y+x;
+		 y=m;
+		 m=x-y;
+	}
+	}
+	return m;
+}
