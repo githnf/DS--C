@@ -1,0 +1,4 @@
+int FractionNe(const FRACTION *x, const FRACTION *y)
+{
+	return !(x->den==y->den&&x->num==y->num);
+}
