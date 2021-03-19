@@ -1,0 +1,18 @@
+FRACTION FractionMul(const FRACTION *x, const FRACTION *y)
+{
+	FRACTION r;
+    int k,xnum,ynum,xden,yden;
+	xnum=x->num;
+	xden=x->den;
+	ynum=y->num;
+	yden=y->den;
+	k=Gcd(xnum,yden);
+	xnum/=k;
+	yden/=k;
+	k=Gcd(xden,ynum);
+	xden/=k;
+	ynum/=k;
+	r.den=yden*xden;
+	r.num=xnum*ynum;
+	return r;
+ } 
