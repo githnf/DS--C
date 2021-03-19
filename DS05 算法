@@ -1,0 +1,16 @@
+int Lcm(int x, int y)
+{
+	int r,a;
+	if(x==0||y==0)
+	{
+		r=0;
+	}
+	else
+	{
+        	x=(x>0?x:-x);
+	        y=(y>0?y:-y);
+		a=Gcd(x,y);
+		r=((y/a)*(x/a))*a;
+	}
+	return r;
+}
