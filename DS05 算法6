@@ -1,0 +1,7 @@
+void IntSwap(int *x, int *y)
+{
+	int m;
+	m=*x;
+	*x=*y;
+	*y=m;
+}
