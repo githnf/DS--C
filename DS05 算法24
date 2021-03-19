@@ -1,0 +1,58 @@
+int main()
+{
+	char k;
+	FRACTION x,y,r;
+	while(1)
+	{
+		printf("A-加法 S-减法 M-乘法 D-除法 Q-退出 > ");
+		scanf(" %c",&k);
+		if(k=='Q'||k=='q')
+		{
+			break;
+		}
+		else if(k=='A'||k=='a')
+		{
+			FractionInput(&x);
+			FractionInput(&y);
+			r=FractionAdd(&x,&y);
+			FractionOutput(&r);
+			printf("\n");
+		}
+		else if(k=='s'||k=='S')
+		{
+			FractionInput(&x);
+			FractionInput(&y);
+			r=FractionSub(&x,&y);
+			FractionOutput(&r);
+				printf("\n");
+		}
+		else if(k=='m'||k=='M')
+		{
+			FractionInput(&x);
+			FractionInput(&y);
+			r=FractionMul(&x,&y);
+			FractionOutput(&r);
+				printf("\n");
+		}
+		else if(k=='d'||k=='D')
+		{
+			FractionInput(&x);
+			FractionInput(&y);
+			if(y.num)
+			{
+				r=FractionDiv(&x,&y);
+				FractionOutput(&r);
+					printf("\n");
+			}
+			else
+			{
+				printf("除数不能为零!\n");
+			}
+		}
+		else
+		{
+			printf("不正确的选项!\n");
+		}
+	}
+	return 0;
+}
