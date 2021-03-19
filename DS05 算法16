@@ -1,0 +1,32 @@
+FRACTION FractionDiv(const FRACTION *x, const FRACTION *y)
+ {
+ 	FRACTION r;
+    int k,xnum,ynum,xden,yden;
+    if(y->num)
+    {
+    xnum=x->num;
+	xden=x->den;
+	yden=y->num;
+	ynum=y->den;
+	k=Gcd(xnum,yden);
+	xnum/=k;
+	yden/=k;
+	k=Gcd(xden,ynum);
+	xden/=k;
+	ynum/=k;
+	r.den=yden*xden;
+	r.num=xnum*ynum;
+   if(r.den<0)
+   {
+       r.den=-r.den;
+       r.num=-r.num;
+   }
+	}
+	else
+	{
+		r.den=1;
+		r.num=0;
+		printf("Divided by zero!\n");
+	}
+	return r;
+ }
