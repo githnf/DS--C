@@ -1,0 +1,20 @@
+/* 你提交的代码将被嵌在这里 */
+void Reduct(FRACTION *fraction)
+{
+	int num,den,k;
+	num=(*fraction).num;
+	den=(*fraction).den;
+	if(den<0)
+	{
+		num=-num;
+		den=-den;
+	}
+	k=Gcd(num,den);
+	if(k!=1)
+	{
+		num/=k;
+		den/=k;
+	}
+		(*fraction).num=num;
+		(*fraction).den=den;
+}
