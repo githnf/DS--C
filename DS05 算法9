@@ -1,0 +1,18 @@
+void FractionSet(FRACTION *fraction, int num, int den)
+{
+	if(!den)
+	{
+		printf("Divided by zero!\n");
+	}
+// 	else if(!num)
+// 	{
+// 		(*fraction).num=0;
+// 		(*fraction).den=1;
+// 	}
+	else
+	{
+		(*fraction).num=num;
+		(*fraction).den=den;
+		Reduct(fraction);
+	}
+}
