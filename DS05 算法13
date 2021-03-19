@@ -1,0 +1,11 @@
+FRACTION FractionAdd(const FRACTION *x, const FRACTION *y)
+{
+	FRACTION r;
+	int num,den,k;
+	den=Lcm((*x).den,(*y).den);
+	num=((*x).num)*(den/((*x).den))+((*y).num)*(den/((*y).den));
+	r.den=den;
+	r.num=num;
+	Reduct(&r);
+	return r;
+ } 
