@@ -1,0 +1,12 @@
+int FractionLe(const FRACTION *x, const FRACTION *y)
+{
+	int xnum,xden,ynum,yden,k;
+ 		xnum=x->num;
+		xden=x->den;
+		ynum=y->num;
+		yden=y->den;
+		k=Lcm(xden,yden);
+		xnum=(k/xden)*xnum;
+		ynum=(k/yden)*ynum;
+		return xnum<=ynum;
+}
