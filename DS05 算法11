@@ -1,0 +1,14 @@
+void FractionInput(FRACTION *fraction)
+{
+	int num,den;
+	scanf("%d/%d",&num,&den);
+	if(!den)
+	{
+		printf("Divided by zero!\n");
+		num=0;
+		den=1;
+	}
+	(*fraction).num=num;
+	(*fraction).den=den;
+	Reduct(fraction);
+}
