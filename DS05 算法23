@@ -1,0 +1,10 @@
+void FractionSwap(FRACTION *x, FRACTION *y)
+{
+	FRACTION r;
+	r.den=x->den;
+	r.num=x->num;
+	x->den=y->den;
+	x->num=y->num;
+	y->den=r.den;
+	y->num=r.num;
+ } 
